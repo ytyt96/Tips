@@ -14,6 +14,7 @@
 		0EA65B611C206CDC001AFDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA65B5F1C206CDC001AFDB8 /* LaunchScreen.storyboard */; };
 		0EA65B6C1C206CDC001AFDB8 /* TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA65B6B1C206CDC001AFDB8 /* TipsTests.swift */; };
 		0EA65B771C206CDC001AFDB8 /* TipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA65B761C206CDC001AFDB8 /* TipsUITests.swift */; };
+		0EECBD7B1C209BBD00CF906F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECBD7A1C209BBD00CF906F /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0EA65B721C206CDC001AFDB8 /* TipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA65B761C206CDC001AFDB8 /* TipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITests.swift; sourceTree = "<group>"; };
 		0EA65B781C206CDC001AFDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EECBD7A1C209BBD00CF906F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0EA65B561C206CDC001AFDB8 /* AppDelegate.swift */,
 				0EA65B581C206CDC001AFDB8 /* ViewController.swift */,
 				0EA65B5A1C206CDC001AFDB8 /* Main.storyboard */,
+				0EECBD7A1C209BBD00CF906F /* SettingsViewController.swift */,
 				0EA65B5D1C206CDC001AFDB8 /* Assets.xcassets */,
 				0EA65B5F1C206CDC001AFDB8 /* LaunchScreen.storyboard */,
 				0EA65B621C206CDC001AFDB8 /* Info.plist */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					0EA65B521C206CDC001AFDB8 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = A996PY67M9;
 					};
 					0EA65B661C206CDC001AFDB8 = {
 						CreatedOnToolsVersion = 7.2;
@@ -258,6 +262,7 @@
 			files = (
 				0EA65B591C206CDC001AFDB8 /* ViewController.swift in Sources */,
 				0EA65B571C206CDC001AFDB8 /* AppDelegate.swift in Sources */,
+				0EECBD7B1C209BBD00CF906F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +402,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutingzhang.Tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +417,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutingzhang.Tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +495,7 @@
 				0EA65B7D1C206CDC001AFDB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EA65B7E1C206CDC001AFDB8 /* Build configuration list for PBXNativeTarget "TipsTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +504,7 @@
 				0EA65B801C206CDC001AFDB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EA65B811C206CDC001AFDB8 /* Build configuration list for PBXNativeTarget "TipsUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +513,7 @@
 				0EA65B831C206CDC001AFDB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
