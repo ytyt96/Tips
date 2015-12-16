@@ -1,0 +1,2 @@
+# Tips
+Simple Tips Calculator
