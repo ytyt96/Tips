@@ -27,9 +27,58 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        var poorPercentage = 18
+        var goodPercentage = 20
+        var greatPercentage = 22
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.objectForKey("default_poor_percentage") != nil{
+            poorPercentage = defaults.integerForKey("default_poor_percentage")
+        }
+        if defaults.objectForKey("default_good_percentage") != nil{
+            goodPercentage = defaults.integerForKey("default_good_percentage")
+        }
+        if defaults.objectForKey("default_great_percentage") != nil{
+            greatPercentage = defaults.integerForKey("default_great_percentage")
+        }
+        
+        tipControl.setTitle(String(format: "%d%%", poorPercentage), forSegmentAtIndex: 0)
+        tipControl.setTitle(String(format: "%d%%", goodPercentage), forSegmentAtIndex: 1)
+        tipControl.setTitle(String(format: "%d%%", greatPercentage), forSegmentAtIndex:2)
+        
+        let tipPercentage = [Double(poorPercentage) / 100, Double(goodPercentage) / 100, Double(greatPercentage) / 100]
+        
+        let billAmount = NSString(string: billTextField.text!).doubleValue
+        let tip = billAmount * tipPercentage[tipControl.selectedSegmentIndex]
+        let total = billAmount + tip
+        
+        
+        tipLabel.text = String(format: "$%.2f", tip)
+        totalLabel.text = String(format: "$%.2f", total)
+    }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-        let tipPercentage = [0.18, 0.2, 0.22]
+        var poorPercentage = 18
+        var goodPercentage = 20
+        var greatPercentage = 22
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.objectForKey("default_poor_percentage") != nil{
+            poorPercentage = defaults.integerForKey("default_poor_percentage")
+        }
+        if defaults.objectForKey("default_good_percentage") != nil{
+            goodPercentage = defaults.integerForKey("default_good_percentage")
+        }
+        if defaults.objectForKey("default_great_percentage") != nil{
+            greatPercentage = defaults.integerForKey("default_great_percentage")
+        }
+        
+        let tipPercentage = [Double(poorPercentage) / 100, Double(goodPercentage) / 100, Double(greatPercentage) / 100]
+        
         let billAmount = NSString(string: billTextField.text!).doubleValue
         let tip = billAmount * tipPercentage[tipControl.selectedSegmentIndex]
         let total = billAmount + tip
