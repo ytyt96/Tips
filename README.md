@@ -1,10 +1,10 @@
-# Pre-work - *Name of App Here*
+# Pre-work - Tips
 
-**Name of your app** is a tip calculator application for iOS.
+Tips is a tip calculator application for iOS.
 
-Submitted by: **Your Name Here**
+Submitted by: Yuting Zhang
 
-Time spent: **X** hours spent in total
+Time spent: 8 hours spent in total
 
 ## User Stories
 
@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] Bill Split functionality added. 
 
 ## Video Walkthrough 
 
