@@ -15,6 +15,7 @@
 		0EA65B6C1C206CDC001AFDB8 /* TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA65B6B1C206CDC001AFDB8 /* TipsTests.swift */; };
 		0EA65B771C206CDC001AFDB8 /* TipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA65B761C206CDC001AFDB8 /* TipsUITests.swift */; };
 		0EECBD7B1C209BBD00CF906F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECBD7A1C209BBD00CF906F /* SettingsViewController.swift */; };
+		0EEECF9F1C2354BF00DAEE31 /* TipsUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEECF9E1C2354BF00DAEE31 /* TipsUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0EA65B761C206CDC001AFDB8 /* TipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsUITests.swift; sourceTree = "<group>"; };
 		0EA65B781C206CDC001AFDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EECBD7A1C209BBD00CF906F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0EEECF9E1C2354BF00DAEE31 /* TipsUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				0EA65B561C206CDC001AFDB8 /* AppDelegate.swift */,
 				0EA65B581C206CDC001AFDB8 /* ViewController.swift */,
+				0EEECF9E1C2354BF00DAEE31 /* TipsUtilities.swift */,
 				0EA65B5A1C206CDC001AFDB8 /* Main.storyboard */,
 				0EECBD7A1C209BBD00CF906F /* SettingsViewController.swift */,
 				0EA65B5D1C206CDC001AFDB8 /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 			files = (
 				0EA65B591C206CDC001AFDB8 /* ViewController.swift in Sources */,
 				0EA65B571C206CDC001AFDB8 /* AppDelegate.swift in Sources */,
+				0EEECF9F1C2354BF00DAEE31 /* TipsUtilities.swift in Sources */,
 				0EECBD7B1C209BBD00CF906F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

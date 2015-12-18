@@ -17,6 +17,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var PoorServiceLabel: UILabel!
     @IBOutlet weak var GoodServiceLabel: UILabel!
     @IBOutlet weak var GreatServiceLabel: UILabel!
+    
+    var poorPercentage = 18
+    var goodPercentage = 20
+    var greatPercentage = 22
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,22 +34,7 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        var poorPercentage = 18
-        var goodPercentage = 20
-        var greatPercentage = 22
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        if defaults.objectForKey("default_poor_percentage") != nil{
-            poorPercentage = defaults.integerForKey("default_poor_percentage")
-        }
-        if defaults.objectForKey("default_good_percentage") != nil{
-            goodPercentage = defaults.integerForKey("default_good_percentage")
-        }
-        if defaults.objectForKey("default_great_percentage") != nil{
-            greatPercentage = defaults.integerForKey("default_great_percentage")
-        }
-    
+        (poorPercentage, goodPercentage, greatPercentage) = loadDefaultSettings()
         
         PoorServiceSlider.setValue(Float(poorPercentage) / 100, animated: true)
         PoorServiceLabel.text = String(format: "%d%%", poorPercentage)
