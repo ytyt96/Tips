@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var poorPercentage = 18
     var goodPercentage = 20
     var greatPercentage = 22
+    var firstTime = true
     
     
     override func viewDidLoad() {
@@ -43,6 +44,11 @@ class ViewController: UIViewController {
         tipControl.setTitle(String(format: "%d%%", greatPercentage), forSegmentAtIndex:2)
         
         updateCalculation()
+        
+        if (firstTime){
+            billTextField.becomeFirstResponder()
+            firstTime = false
+        }
     }
     
     func updateCalculation(){
